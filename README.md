@@ -1,69 +1,107 @@
-# React + TypeScript + Vite
+# Bank Mandiri Web Enhancement – Individual & Help Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a redesign and functional enhancement of the **Bank Mandiri** website, focusing on two critical areas: the **Individual page** and the **Help page**. The improvements include **UI/UX consistency**, **component optimization**, and the addition of two new features: **Smart Comparison (Mandiri Product Advisor)** and **Live Chat with Virtual Queue**.
 
-Currently, two official plugins are available:
+## 🧩 Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Tech Stack**: Vite + React + TypeScript + Tailwind CSS
+- **Folder Layout**:
+src/
+├── components/
+│ └── sections/
+│ ├── SmartComparison.tsx
+│ └── LiveChat.tsx
+├── pages/
+│ ├── IndividualPage.tsx
+│ └── HelpPage.tsx
+└── assets/
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Libraries**:
+- `lucide-react` for iconography
+- `tailwindcss` for utility-first styling
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🔍 Project Objectives
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Improve **usability** and **user decision-making** on financial products.
+2. Enable **direct customer interaction** without third-party apps.
+3. Maintain design coherence with the original Bank Mandiri branding.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✨ New Features
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 1. Mandiri Product Advisor (Smart Comparison)
+
+**Purpose**:  
+To allow users to compare key information from up to three Bank Mandiri products side-by-side.
+
+**User Flow**:
+- Users select 2–3 products (e.g., Tabungan Now, Kartu Kredit Visa).
+- A comparison table dynamically appears.
+- Each row compares essential details: interest rate, fees, min balance, etc.
+
+**Benefits**:
+- Faster decision-making  
+- Clear product overview  
+- Better UX experience
+
+**Tech Highlights**:
+- Uses local React state for dynamic rendering
+- Mobile responsive
+- Minimalist and branded interface
+
+---
+
+### 2. Live Chat with Virtual Queue
+
+**Purpose**:  
+To enable real-time support via chat embedded within the Help page.
+
+**User Flow**:
+- User clicks the floating Live Chat button.
+- System displays an initial view with CTA.
+- After starting the chat, user enters a **virtual queue**.
+- Queue shows **position** and **estimated wait time**.
+- When connected, user can chat with simulated customer service.
+
+**Benefits**:
+- Predictable wait times reduce user frustration  
+- Increased user engagement  
+- Real-time customer service feel with elegant design
+
+**Bug Fixes**:
+- Fixed header disappearing during chat
+- Solved message duplication issue
+- Resolved one-letter input bug in chat field
+- Improved spacing and alignment across chat components
+
+---
+
+
+## 📈 Outcome
+
+- Improved user engagement and retention
+- Professional-grade interface adhering to enterprise standards
+- Components ready for real-world deployment in banking industry
+
+---
+
+## 📁 Contribution Guide
+
+If you wish to contribute:
+1. Clone the repo.
+2. Run `npm install`
+3. Use `npm run dev` to launch dev server
+4. Make changes only in `/src/components/sections/` for UI
+5. Commit with descriptive messages
+
+---
+
+## 📄 License
+
+This project is for academic and educational purposes. All product names, logos, and brands are property of their respective owners.
+
+---
